@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { BsTelephone } from "react-icons/bs";
+import { CgMenuRight } from "react-icons/cg";
 
 const menu = ["Главная", "Тест", "Каталог", "О нас", "Цены"];
 
@@ -9,8 +10,9 @@ export default function Header() {
     const [active, setActive] = useState(0);
 
     return (
-        <header className="mt-8 flex items-center justify-around">
-            <div className="text-center">
+        <header className="m-8 sm:m-0 sm:mx-8 sm:mt-8 flex items-center md:justify-around justify-between">
+            {/* logo */}
+            <div className="md:text-center">
                 <p className="font-semibold">
                     Simple <span className="text-[15px] text-[#BD7048]">Design</span>
                 </p>
@@ -18,7 +20,13 @@ export default function Header() {
                 <p className="text-[10px]">дизайн интерьера</p>
             </div>
 
-            <div>
+            {/* burger menu */}
+            <div className="md:hidden flex text-3xl">
+                <CgMenuRight className="font-extrabold" />
+            </div>
+
+            {/* navigation */}
+            <div className="hidden md:flex">
                 <nav className="flex gap-12 text-[15px]">
                     {menu.map((item, index) => {
                         const isActive = active === index;
@@ -64,7 +72,8 @@ export default function Header() {
                 </nav>
             </div>
 
-            <div className="flex items-center">
+            {/* tel */}
+            <div className="hidden md:flex items-center">
                 <BsTelephone className="text-xl" />
 
                 <div className="text-center text-[15px]">

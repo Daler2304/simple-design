@@ -72,8 +72,8 @@ export default function RoomsDesign() {
             <h2 className="text-[40px] text-center font-bold mb-6">Дизайн комнат</h2>
             <div className="flex justify-center w-full">
                 <p className="w-full text-center text-[18px] font-medium text-black/60">
-                    Выбирая дизайн комнаты, вы получаете смету со списком всех предметов в интерьере, названиями,
-                    артикулами, цветом стен и так далее.
+                    Выбирая дизайн комнаты, вы получаете смету со списком всех предметов в
+                    интерьере, названиями, артикулами, цветом стен и так далее.
                 </p>
             </div>
 
@@ -84,14 +84,14 @@ export default function RoomsDesign() {
                         <hr className="w-full h-px border-t border-stone-700/40" />
                     </div>
 
-                    <div className="flex gap-6 items-center justify-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                         {room.items.map((item) => (
-                            <div className="flex-1" key={item.id}>
+                            <div className="w-full max-w-100" key={item.id}>
                                 <Image
                                     src={item.img}
                                     alt={item.name}
-                                    width={300}
-                                    height={200}
+                                    width={400}
+                                    height={220}
                                     className="rounded-[20px] w-full h-55 object-cover object-left"
                                 />
 
@@ -101,7 +101,9 @@ export default function RoomsDesign() {
                                     <button className="flex items-center justify-center bg-gray-100 w-37.5 h-14 rounded-full gap-2">
                                         <PiHandbag className="text-xl" />
 
-                                        <span className="text-[#BD7048] text-[15px] font-semibold">Выбрать</span>
+                                        <span className="text-[#BD7048] text-[15px] font-semibold">
+                                            Выбрать
+                                        </span>
                                     </button>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@ export default function RoomsDesign() {
             <div className="flex justify-center my-16">
                 <Link
                     href=""
-                    className="bg-[#BD7048] text-white w-71.25 h-18 flex items-center justify-center rounded-full"
+                    className="bg-[#BD7048] text-white font-semibold w-71.25 h-18 flex items-center justify-center rounded-full"
                 >
                     К каталогу комнат
                 </Link>

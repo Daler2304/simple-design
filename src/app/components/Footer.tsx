@@ -11,7 +11,7 @@ export default function Footer() {
                     <p className="text-[10px]">дизайн интерьера</p>
                 </div>
 
-                <div className="flex-1 flex justify-center">
+                <div className="flex-1 sm:flex justify-center hidden">
                     <nav className="flex flex-col text-[#21212180] text-[15px] font-medium">
                         <a href="/">Главная</a>
                         <a href="#">Тест</a>
@@ -20,7 +20,7 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                <div className="flex-[1.2] flex flex-col text-[#21212180] font-medium">
+                <div className="flex-[1.2] hidden sm:flex flex-col text-[#21212180] font-medium">
                     <a href="#">Политика конфиденциальности</a>
                     <a href="#">Условия пользования</a>
                 </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 
@@ -14,9 +14,13 @@ export const metadata: Metadata = {
         "Simple Design — создание стильных и функциональных интерьеров, разработка дизайн-проектов и оформление пространства под ваш образ жизни.",
 };
 
+export const viewport: Viewport = {
+    initialScale: 1,
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
-        <html lang="ru" className={`${montserratAlternates.variable} h-full antialiased`}>
+        <html lang="ru" className={`${montserratAlternates.variable} h-full `}>
             <body className="min-h-full flex flex-col font-montserrat">{children}</body>
         </html>
     );

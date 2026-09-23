@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 export default function Hero() {
     return (
-        <section id="hero" className="relative h-full w-full">
+        <section id="hero" className="relative w-full h-full">
             <Image
                 src="/hero.jpg"
                 alt="Hero"
@@ -13,11 +14,21 @@ export default function Hero() {
                 loading="eager"
             />
             <div className="absolute inset-0 bg-[#68686880]" />
-            <div className="absolute inset-1 z-10 flex flex-col items-center justify-center">
-                <h1 className="text-[40px] text-white font-semibold text-center">
-                    Дизайн-проект для вашей квартиры <br /> за 2 недели и 199 000 ₸
+
+            {/* shop button */}
+            <div className="md:hidden absolute top-6 right-6 z-11 rounded-full bg-gray-50 p-4 flex items-center justify-center text-xl">
+                <HiOutlineShoppingBag />
+            </div>
+
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
+                <h1 className="md:text-[40px] text-[6vw] text-white font-semibold text-center px-10">
+                    Дизайн-проект для вашей квартиры <br />
+                    за 2 недели и 199 000 ₸
                 </h1>
-                <a href="#" className="rounded-full bg-[#BD7048] px-12 py-6 mt-8 text-white text-[15px] font-semibold">
+                <a
+                    href="#"
+                    className="rounded-full bg-[#BD7048] px-12 py-6 mt-8 text-white text-[15px] font-semibold"
+                >
                     Консультация
                 </a>
             </div>

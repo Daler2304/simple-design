@@ -7,3 +7,24 @@
 a:hover {
     color: black;
 }
+
+/* class md2:block */
+@media (width >= 1000px) {
+    .md2\:block {
+        display: block;
+    }
+}
+
+/* class md:block */
+@media (width >= 800px) {
+    .md\:block {
+        display: block;
+    }
+}
+
+/* class md:block */
+@media (width >= 800px) {
+    .md\:flex {
+        display: block;
+    }
+}
