@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BsFiletypePdf } from "react-icons/bs";
 
 export default function Planning() {
@@ -33,6 +34,25 @@ export default function Planning() {
                     <BsFiletypePdf size={40} />
                     <span>Посмотреть пример</span>
                 </p>
+            </div>
+            <div className="relative flex items-center justify-center my-16">
+                <Image
+                    src="/positioning1.png"
+                    alt="pos1"
+                    width={100}
+                    height={100}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                    loading="eager"
+                />
+                <Image
+                    src="/positioning2.jpg"
+                    alt="pos2"
+                    width={100}
+                    height={100}
+                    sizes="100vw"
+                    className="w-[75%] h-auto rotate-15 absolute top-1/2"
+                />
             </div>
         </section>
     );
