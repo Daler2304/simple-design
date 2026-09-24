@@ -14,17 +14,3 @@ a:hover {
         display: block;
     }
 }
-
-/* class md:block */
-@media (width >= 800px) {
-    .md\:block {
-        display: block;
-    }
-}
-
-/* class md:block */
-@media (width >= 800px) {
-    .md\:flex {
-        display: block;
-    }
-}
